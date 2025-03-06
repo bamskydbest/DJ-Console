@@ -1,11 +1,7 @@
 import "./App.css";
 
 function App() {
-  return (
-    <>
-      <div className="">DJ CONSOLE</div>
-    </>
-  );
+  return <></>;
 }
 
 export default App;
