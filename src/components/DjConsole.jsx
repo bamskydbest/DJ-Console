@@ -46,10 +46,14 @@ const sounds = [
 ];
 const DjConsole = () => {
   const [activeButton, setActiveButton] = useState(null);
+  const [bright, setBright] = useState(false);
+
   const playSound = (sound, index) => {
     setActiveButton(index);
     const audio = new Audio(sound.file);
     audio.play();
+    // audio.pause();
+    //     audio.currentTime = 0;
     setTimeout(() => setActiveButton(null), 100);
   };
 
@@ -59,13 +63,14 @@ const DjConsole = () => {
         {" "}
         <h1>DJ CONSOLE</h1>{" "}
       </div>
-      <div className="play">
+      <div className="play" onClick={() => setBright(!bright)}>
         {sounds.map((sound, index) => (
           <button
             key={index}
             onClick={() => playSound(sound, index)}
             style={{
               backgroundColor: sound.color,
+              filter: bright ? "brightness(100%)" : "brightness(60%)",
             }}
             // {`${activeButton}`}
             //activeButton ? sound.color : sound.opacity,
