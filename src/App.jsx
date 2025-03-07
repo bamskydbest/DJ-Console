@@ -1,7 +1,12 @@
 import "./App.css";
+import DjConsole from "./components/DjConsole";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <DjConsole />
+    </>
+  );
 }
 
 export default App;
