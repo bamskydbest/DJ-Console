@@ -17,9 +17,44 @@ const New = () => {
     }
   }, [bright, audio]);
   return (
-    <div>
+    <div className="play">
       <div
         className="new"
+        style={{ filter: bright ? "brightness(100%)" : "brightness(60%)" }}
+        onClick={() => setBright(!bright)}
+      ></div>
+      <div
+        className="new-two"
+        style={{ filter: bright ? "brightness(100%)" : "brightness(60%)" }}
+        onClick={() => setBright(!bright)}
+      ></div>
+      <div
+        className="new-three"
+        style={{ filter: bright ? "brightness(100%)" : "brightness(60%)" }}
+        onClick={() => setBright(!bright)}
+      ></div>
+      <div
+        className="new-seven"
+        style={{ filter: bright ? "brightness(100%)" : "brightness(60%)" }}
+        onClick={() => setBright(!bright)}
+      ></div>
+      <div
+        className="new-eight"
+        style={{ filter: bright ? "brightness(100%)" : "brightness(60%)" }}
+        onClick={() => setBright(!bright)}
+      ></div>
+      <div
+        className="new-four"
+        style={{ filter: bright ? "brightness(100%)" : "brightness(60%)" }}
+        onClick={() => setBright(!bright)}
+      ></div>
+      <div
+        className="new-five"
+        style={{ filter: bright ? "brightness(100%)" : "brightness(60%)" }}
+        onClick={() => setBright(!bright)}
+      ></div>
+      <div
+        className="new-six"
         style={{ filter: bright ? "brightness(100%)" : "brightness(60%)" }}
         onClick={() => setBright(!bright)}
       ></div>

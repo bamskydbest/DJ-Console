@@ -57,6 +57,8 @@ const DjConsole = () => {
     setTimeout(() => setActiveButton(null), 100);
   };
 
+  const nameFunction = () => {};
+
   return (
     <div>
       <div className="header">

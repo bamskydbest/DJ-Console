@@ -42,3 +42,38 @@ body {
   height: 150px;
   background-color: #1f7d53;
 }
+.new-two {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+}
+.new-three {
+  width: 150px;
+  height: 150px;
+  background-color: tan;
+}
+.new-four {
+  width: 150px;
+  height: 150px;
+  background-color: yellow;
+}
+.new-five {
+  width: 150px;
+  height: 150px;
+  background-color: blue;
+}
+.new-six {
+  width: 150px;
+  height: 150px;
+  background-color: green;
+}
+.new-seven {
+  width: 150px;
+  height: 150px;
+  background-color: pink;
+}
+.new-eight {
+  width: 150px;
+  height: 150px;
+  background-color: brown;
+}
