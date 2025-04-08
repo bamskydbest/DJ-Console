@@ -2,13 +2,19 @@ import React, { useState } from "react";
 
 const Button = (prop) => {
   const [bright, setBright] = useState(false);
+  const [currentAudio, setCurrentAudio] = useState(null);
   const playSound = (sound) => {
-    // setActiveButton(index);
-    const audio = new Audio(sound.file);
-    audio.play();
-    // audio.pause();
-    //     audio.currentTime = 0;
-    // setTimeout(() => setActiveButton(null), 100);
+    // if an audio instance exists and is playing, pause it and reset
+    if (currentAudio && !currentAudio.paused) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0; // reset playback position if needed
+      setCurrentAudio(null);
+    } else {
+      // Otherwise, create a new Audio instance and play the sound
+      const audio = new Audio(sound.file);
+      audio.play();
+      setCurrentAudio(audio);
+    }
   };
 
   const sound = prop.sound;
@@ -23,8 +29,6 @@ const Button = (prop) => {
         backgroundColor: sound.color,
         filter: bright ? "brightness(100%)" : "brightness(60%)",
       }}
-      // {`${activeButton}`}
-      //activeButton ? sound.color : sound.opacity,
     ></button>
   );
 };
