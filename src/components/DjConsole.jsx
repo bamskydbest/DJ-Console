@@ -42,7 +42,7 @@ const DjConsole = () => {
         {" "}
         <h1>DJ CONSOLE</h1>{" "}
       </div>
-      <div className="play" onClick={() => setBright(!bright)}>
+      <div className="play">
         {sounds.map((sound) => (
           <Button key={sound.file} sound={sound} />
         ))}

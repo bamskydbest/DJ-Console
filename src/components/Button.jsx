@@ -13,6 +13,7 @@ const Button = (prop) => {
       // Otherwise, create a new Audio instance and play the sound
       const audio = new Audio(sound.file);
       audio.play();
+      audio.loop = true;
       setCurrentAudio(audio);
     }
   };
